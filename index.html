@@ -13,9 +13,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <script>
+      (function () {
+        try {
+          var preferred = localStorage.getItem("vh_lang");
+          if (preferred !== "en" && !location.pathname.endsWith("/ro.html")) {
+            location.replace("./ro.html");
+          }
+        } catch (e) {
+          location.replace("./ro.html");
+        }
+      })();
+    </script>
 
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -38,6 +51,10 @@
         </nav>
 
         <div class="nav__actions">
+          <div class="lang-switch" aria-label="Language selector">
+            <a class="lang-switch__link is-active" data-lang="en" href="./index.html">EN</a>
+            <a class="lang-switch__link" data-lang="ro" href="./ro.html">RO</a>
+          </div>
           <a class="btn btn--primary" href="#audit">Get a Free Audit</a>
           <button
             class="icon-btn nav__toggle"
@@ -58,6 +75,10 @@
           <a class="mobile-menu__link" href="#how">How it works</a>
           <a class="mobile-menu__link" href="#proof">Results</a>
           <a class="mobile-menu__link" href="#audit">Free audit</a>
+          <div class="mobile-lang">
+            <a class="lang-switch__link is-active" data-lang="en" href="./index.html">English</a>
+            <a class="lang-switch__link" data-lang="ro" href="./ro.html">Romana</a>
+          </div>
           <a class="btn btn--primary mobile-menu__cta" href="#audit">Get a Free Audit</a>
         </div>
       </div>

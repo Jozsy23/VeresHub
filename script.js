@@ -6,6 +6,7 @@ const SELECTORS = {
   mobileLinks: ".mobile-menu__link, .mobile-menu__cta",
   auditForm: "#auditForm",
   formSuccess: "#formSuccess",
+  langLinks: "[data-lang]",
 };
 
 function setAriaExpanded(el, expanded) {
@@ -106,8 +107,36 @@ function setupAuditForm() {
   });
 }
 
+function setupLanguagePreference() {
+  const langLinks = document.querySelectorAll(SELECTORS.langLinks);
+  if (!langLinks.length) return;
+
+  const path = window.location.pathname;
+  const isRomanianPage = path.endsWith("/ro.html");
+  const currentLang = isRomanianPage ? "ro" : "en";
+
+  try {
+    localStorage.setItem("vh_lang", currentLang);
+  } catch (e) {
+    // ignore storage errors
+  }
+
+  langLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      const lang = link.getAttribute("data-lang");
+      if (!lang) return;
+      try {
+        localStorage.setItem("vh_lang", lang);
+      } catch (e) {
+        // ignore storage errors
+      }
+    });
+  });
+}
+
 setupMobileMenu();
 setupReveal();
 setupNavElevation();
 setupAuditForm();
+setupLanguagePreference();
 
