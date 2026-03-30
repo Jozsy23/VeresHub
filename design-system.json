@@ -1,0 +1,336 @@
+{
+  "designSystem": {
+    "meta": {
+      "name": "Dark Futuristic Landing Page Design System",
+      "style": "Dark Futuristic / Tech Minimal",
+      "mood": "Premium, mysterious, high-tech, immersive",
+      "primaryUseCase": "SaaS / Tech product landing pages",
+      "themePolarity": "dark"
+    },
+
+    "colorPalette": {
+      "description": "Deep black base with vibrant neon-to-purple gradient accents. High contrast between background and interactive elements.",
+      "background": {
+        "primary": "#000000",
+        "secondary": "#0a0a0f",
+        "surface": "#0d0d18",
+        "overlay": "rgba(10, 10, 20, 0.85)"
+      },
+      "text": {
+        "primary": "#ffffff",
+        "secondary": "rgba(255, 255, 255, 0.65)",
+        "muted": "rgba(255, 255, 255, 0.35)",
+        "heading": "#ffffff"
+      },
+      "accent": {
+        "primary": "#4f46e5",
+        "primaryHover": "#6366f1",
+        "neonBlue": "#3b82f6",
+        "neonPurple": "#8b5cf6",
+        "neonPink": "#ec4899",
+        "cyan": "#06b6d4"
+      },
+      "gradients": {
+        "accentPrimary": "linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899)",
+        "accentSubtle": "linear-gradient(135deg, rgba(59,130,246,0.15), rgba(139,92,246,0.15))",
+        "backgroundAmbient": "radial-gradient(ellipse at 70% 50%, rgba(79,70,229,0.18) 0%, transparent 60%)",
+        "backgroundAmbientLeft": "radial-gradient(ellipse at 30% 80%, rgba(168,85,247,0.12) 0%, transparent 50%)",
+        "heroBlob": "linear-gradient(135deg, #3b82f6 0%, #6d28d9 40%, #ec4899 100%)"
+      },
+      "borders": {
+        "subtle": "rgba(255, 255, 255, 0.08)",
+        "medium": "rgba(255, 255, 255, 0.15)",
+        "accent": "rgba(99, 102, 241, 0.4)"
+      }
+    },
+
+    "typography": {
+      "description": "Bold, heavy sans-serif for display headings. Lightweight clean sans-serif for body and UI. Extreme size contrast between hero and body text.",
+      "fontFamilies": {
+        "display": "'Clash Display', 'Space Grotesk', 'Syne', sans-serif",
+        "body": "'DM Sans', 'Outfit', 'Inter', sans-serif",
+        "mono": "'JetBrains Mono', 'Fira Code', monospace"
+      },
+      "scale": {
+        "heroHeading": {
+          "fontSize": "clamp(4rem, 9vw, 8rem)",
+          "fontWeight": "800",
+          "lineHeight": "0.95",
+          "letterSpacing": "-0.03em",
+          "textTransform": "none"
+        },
+        "sectionHeading": {
+          "fontSize": "clamp(1.8rem, 3vw, 3rem)",
+          "fontWeight": "600",
+          "lineHeight": "1.1",
+          "letterSpacing": "-0.02em"
+        },
+        "subheading": {
+          "fontSize": "1.125rem",
+          "fontWeight": "400",
+          "lineHeight": "1.6",
+          "letterSpacing": "0"
+        },
+        "navItem": {
+          "fontSize": "0.8125rem",
+          "fontWeight": "500",
+          "letterSpacing": "0.04em",
+          "textTransform": "uppercase"
+        },
+        "body": {
+          "fontSize": "0.9375rem",
+          "fontWeight": "400",
+          "lineHeight": "1.7"
+        },
+        "caption": {
+          "fontSize": "0.8125rem",
+          "fontWeight": "400",
+          "lineHeight": "1.5",
+          "opacity": "0.6"
+        },
+        "label": {
+          "fontSize": "0.75rem",
+          "fontWeight": "600",
+          "letterSpacing": "0.08em",
+          "textTransform": "uppercase"
+        }
+      }
+    },
+
+    "spacing": {
+      "description": "Generous spacing system. Wide horizontal padding, vertical rhythm based on 8px grid.",
+      "baseUnit": "8px",
+      "scale": {
+        "xs": "4px",
+        "sm": "8px",
+        "md": "16px",
+        "lg": "24px",
+        "xl": "40px",
+        "2xl": "64px",
+        "3xl": "96px",
+        "4xl": "128px"
+      },
+      "layout": {
+        "navHeight": "72px",
+        "maxContentWidth": "1280px",
+        "heroVerticalPadding": "clamp(80px, 12vh, 160px)",
+        "sectionPadding": "80px 0",
+        "horizontalPagePadding": "clamp(24px, 6vw, 96px)"
+      }
+    },
+
+    "layout": {
+      "description": "Full-width dark canvas. Nav fixed at top. Hero section is split: large bold heading on the left, abstract 3D/generative visual on the right. Asymmetric two-column grid for hero.",
+      "grid": {
+        "type": "CSS Grid + Flexbox hybrid",
+        "heroColumns": "1fr 1fr",
+        "heroColumnBreakdown": "Left: text content + CTA. Right: decorative visual / 3D blob / abstract animation",
+        "contentAlignment": "Left-aligned text, center-aligned decorative right panel"
+      },
+      "navbar": {
+        "position": "fixed top",
+        "background": "rgba(0, 0, 0, 0.6)",
+        "backdropFilter": "blur(20px) saturate(180%)",
+        "borderBottom": "1px solid rgba(255,255,255,0.06)",
+        "contentLayout": "logo left | nav links center | CTA button right + hamburger icon",
+        "logoStyle": "geometric icon mark + wordmark in bold caps",
+        "ctaButton": "filled pill with accent color"
+      },
+      "heroSection": {
+        "structure": "Two column split. Left: headline + search/input bar + dual CTA buttons. Right: large abstract 3D shape with glowing contour lines.",
+        "headlinePosition": "bottom-left of left column, large weight",
+        "searchBar": {
+          "type": "pill-shaped input",
+          "width": "~320px",
+          "background": "rgba(255,255,255,0.07)",
+          "border": "1px solid rgba(255,255,255,0.12)",
+          "icon": "search icon on right edge"
+        },
+        "ctaButtons": {
+          "primary": {
+            "style": "pill",
+            "background": "accent neon color (blue/cyan)",
+            "text": "uppercase label",
+            "padding": "10px 24px"
+          },
+          "secondary": {
+            "style": "pill outline",
+            "background": "transparent",
+            "border": "1px solid rgba(255,255,255,0.3)",
+            "text": "lowercase descriptive label"
+          }
+        },
+        "rightPanel": {
+          "type": "Decorative abstract shape",
+          "visualStyle": "Topographic contour lines / organic blob with glowing neon strokes",
+          "colorRange": "Blue to purple to pink gradient strokes",
+          "effect": "Animated or static layered line art, no fill, stroke-only",
+          "supplementaryCard": {
+            "position": "Overlaid upper-right of right panel",
+            "content": "Logo mark + tagline + body text",
+            "background": "transparent or very subtle dark surface"
+          }
+        }
+      }
+    },
+
+    "components": {
+      "navbar": {
+        "height": "72px",
+        "backdrop": "blur + dark tint",
+        "logoMark": "Simple geometric / abstract icon + all-caps wordmark",
+        "navLinks": "Spaced uppercase small caps, muted white, hover: white",
+        "ctaButton": "Filled pill, accent color, 'SIGN IN' or primary action",
+        "hamburger": "Simple 3-line or custom icon on far right"
+      },
+      "button": {
+        "primary": {
+          "background": "accent gradient or solid neon",
+          "borderRadius": "999px",
+          "padding": "10px 28px",
+          "fontWeight": "600",
+          "fontSize": "0.8125rem",
+          "letterSpacing": "0.05em",
+          "textTransform": "uppercase",
+          "boxShadow": "0 0 20px rgba(99,102,241,0.4)"
+        },
+        "secondary": {
+          "background": "transparent",
+          "border": "1px solid rgba(255,255,255,0.25)",
+          "borderRadius": "999px",
+          "padding": "10px 28px",
+          "color": "rgba(255,255,255,0.8)",
+          "fontWeight": "400",
+          "textTransform": "lowercase"
+        }
+      },
+      "inputSearch": {
+        "borderRadius": "999px",
+        "background": "rgba(255,255,255,0.06)",
+        "border": "1px solid rgba(255,255,255,0.1)",
+        "padding": "12px 20px",
+        "color": "#ffffff",
+        "placeholderOpacity": "0.4",
+        "iconPosition": "right",
+        "focusBorder": "1px solid rgba(99,102,241,0.6)",
+        "focusShadow": "0 0 0 3px rgba(99,102,241,0.15)"
+      },
+      "card": {
+        "background": "rgba(255,255,255,0.04)",
+        "border": "1px solid rgba(255,255,255,0.08)",
+        "borderRadius": "16px",
+        "backdropFilter": "blur(12px)",
+        "padding": "24px",
+        "hoverBorder": "rgba(99,102,241,0.3)",
+        "hoverShadow": "0 8px 32px rgba(99,102,241,0.15)"
+      },
+      "badge": {
+        "background": "rgba(99,102,241,0.15)",
+        "border": "1px solid rgba(99,102,241,0.3)",
+        "borderRadius": "999px",
+        "padding": "4px 12px",
+        "fontSize": "0.75rem",
+        "fontWeight": "600",
+        "letterSpacing": "0.06em",
+        "textTransform": "uppercase",
+        "color": "#a5b4fc"
+      }
+    },
+
+    "decorativeElements": {
+      "description": "Abstract generative art is the primary decorative system. Organic topographic/contour line shapes with glowing neon strokes dominate the visual space.",
+      "heroBlob": {
+        "type": "Layered contour lines — organic blob shape rendered as concentric strokes",
+        "strokeOnly": true,
+        "strokeColors": "Gradient from #3b82f6 → #8b5cf6 → #ec4899",
+        "strokeWidth": "1–2px",
+        "layers": "20–40 concentric scaled outlines",
+        "glow": "Subtle glow/bloom on strokes via filter: blur or SVG feGaussianBlur",
+        "animation": "Slow morph / breathing motion (optional)",
+        "placement": "Centered-right, large, extends beyond viewport edges",
+        "opacity": "0.85–1"
+      },
+      "backgroundAmbience": {
+        "type": "Radial gradient blobs placed off-center",
+        "colors": ["rgba(79,70,229,0.15)", "rgba(168,85,247,0.1)", "rgba(236,72,153,0.08)"],
+        "blurRadius": "80–120px",
+        "placement": "Behind decorative blob, right-center and bottom-left corners"
+      },
+      "gridOrNoise": {
+        "type": "Optional very subtle dot grid or noise grain texture",
+        "opacity": "0.03–0.06",
+        "blendMode": "overlay"
+      }
+    },
+
+    "motion": {
+      "description": "Subtle, purposeful animations. No flashy distractions. Focus on page load reveals and ambient background motion.",
+      "pageLoad": {
+        "heroHeading": "Fade up from 20px, 0.6s ease-out, delay 0.1s",
+        "heroCta": "Fade up, delay 0.3s",
+        "rightPanel": "Fade in, scale from 0.97, delay 0.2s"
+      },
+      "ambient": {
+        "blobMorph": "CSS @keyframes path morph, 8–12s infinite ease-in-out",
+        "backgroundPulse": "Radial gradient opacity pulse, 6s infinite"
+      },
+      "interactions": {
+        "buttonHover": "Scale 1.03, shadow intensify, 0.2s ease",
+        "navLinkHover": "Opacity 1, subtle underline expand",
+        "cardHover": "TranslateY -4px, border glow, 0.25s ease"
+      },
+      "easing": {
+        "standard": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "enter": "cubic-bezier(0, 0, 0.2, 1)",
+        "exit": "cubic-bezier(0.4, 0, 1, 1)",
+        "spring": "cubic-bezier(0.34, 1.56, 0.64, 1)"
+      }
+    },
+
+    "shadows": {
+      "subtle": "0 2px 8px rgba(0,0,0,0.4)",
+      "medium": "0 8px 24px rgba(0,0,0,0.5)",
+      "elevated": "0 16px 48px rgba(0,0,0,0.6)",
+      "accentGlow": "0 0 24px rgba(99,102,241,0.35)",
+      "neonGlow": "0 0 40px rgba(139,92,246,0.4), 0 0 80px rgba(59,130,246,0.2)"
+    },
+
+    "borderRadius": {
+      "sm": "6px",
+      "md": "12px",
+      "lg": "16px",
+      "xl": "24px",
+      "full": "999px"
+    },
+
+    "replicationGuidelines": {
+      "keyPrinciples": [
+        "Always start with a true black (#000) or near-black background — no dark grays",
+        "Hero heading must be massive (clamp 4rem → 8rem) and heavy weight (800)",
+        "The right half of the hero is a decorative zone — fill it with abstract generative/3D art, never more text",
+        "Use stroke-only contour line blobs as the primary decorative motif — no flat fills",
+        "Neon gradient (blue → purple → pink) is the accent system — use sparingly on strokes, buttons, glows",
+        "All buttons are pill-shaped (border-radius: 999px)",
+        "Nav uses blur backdrop — always semi-transparent, never fully opaque",
+        "Typography is a two-tier system: massive display font for hero, small precise sans for UI/nav",
+        "Search/input bars are pill-shaped with very low opacity fill",
+        "Ambient background uses radial gradient 'lights' placed off-center"
+      ],
+      "avoidPatterns": [
+        "White or light backgrounds",
+        "Rectangular sharp-cornered buttons",
+        "Filled decorative shapes (use strokes only for blob art)",
+        "Centered hero layouts (always left-align text)",
+        "Generic stock photography",
+        "Flat monochrome color schemes without glow accents",
+        "Overcrowded nav with too many elements"
+      ],
+      "technicalStack": {
+        "recommended": "HTML/CSS/JS or React + Tailwind CSS",
+        "fonts": "Google Fonts — Syne or Clash Display for headings, DM Sans for body",
+        "animations": "CSS keyframes for ambient, Framer Motion for page-load reveals (React)",
+        "blobArt": "SVG with feGaussianBlur filter for glow effect, or Three.js/Canvas for animated version"
+      }
+    }
+  }
+}
